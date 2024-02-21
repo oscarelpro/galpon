@@ -7,41 +7,76 @@ include 'conexion.php';
 
 <br><br><br><br>
 <div class="container">
-<form class="row g-3">
-  <div class="col-md-12">
-    <label for="inputEmail4" class="form-label">CODIGO</label>
-    <input type="email" class="form-control" id="inputEmail4" value=""  placeholder="CODIGO DE BARRA ">
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">SKU</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
   </div>
-  <div class="col-md-12">
-    <label for="inputPassword4" class="form-label">PRODUCTO</label>
-    <input type="text" class="form-control" id="inputPassword4" placeholder="PRODUCTO" name="producto">
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">PRODUCTO</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
   </div>
-  <div class="col-md-12 ">
-  <label for="inputPassword4" class="form-label">MARCA</label> 
-            <?php 
-    $resultado=mysqli_query($conex,"SELECT id_marca,marcas FROM tbl_marca");
-    $row=mysqli_num_rows($resultado);
-    
-    echo "<select name='id_almacen' id='id_almacen' onChange='ejecutarAjax(this.value)' class='form-control'>" ; 
-
-  echo "<option value='todo'>SELECCIONE UNA MARCA </option>";
-         if($row>0){
-              do{
-              echo "<option value='".$var['id_marca']."'>".utf8_encode($var['marcas'])." </option>";   
-              }while ($var=mysqli_fetch_array($resultado));
-            }
-        echo "</select>";
-        ?>
-        </div> 
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">MARCA</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">DETALLE</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">PRECIO</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">UBICACION</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">STOCK</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">PRECIO</label>
-    <input type="text" class="form-control" id="inputAddress2" >
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
   </div>
-  <br>
-  
-  <center><div class="col-13 ">
-    <button type="submit" class="btn btn-primary">GUARDAR</button>
-  </div></center>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
 </form>
 
 </div>
