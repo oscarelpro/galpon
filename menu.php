@@ -24,9 +24,10 @@
          PRODUCTOS
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="p_entrada.php">ENTRADA</a></li>
-            <li><a class="dropdown-item" href="#">SALIDA</a></li>
-            <li><a class="dropdown-item" href="#">CONSULTAR</a></li>
+          <li><a class="dropdown-item" href="nuevoprincipal.php">NUEVO PRODUCTO</a></li>
+            <li><a class="dropdown-item" href="p_entrada.php">ENTRADA DE MERCANCIA </a></li>
+            <li><a class="dropdown-item" href="#">SALIDA DE MERCANCIA </a></li>
+            <li><a class="dropdown-item" href="#">CONSULTAR PRODUCTOS</a></li>
             
           </ul>
         </li>
