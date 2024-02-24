@@ -51,21 +51,21 @@ include 'conexion.php';
   </div>
   <div class="col-md-3">
     <label for="validationCustom05" class="form-label">UBICACION</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
+    <input type="text" class="form-control" id="validationCustom05" required name="ubicacion">
     <div class="invalid-feedback">
       Please provide a valid zip.
     </div>
   </div>
   <div class="col-md-3">
     <label for="validationCustom05" class="form-label">STOCK</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
+    <input type="text" class="form-control" id="validationCustom05" required  name="stock" >
     <div class="invalid-feedback">
       Please provide a valid zip.
     </div>
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required name="marca" >
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
       </label>
